@@ -1,0 +1,98 @@
+.advantages{
+  padding-top: 50px;
+  padding-bottom: 27px;
+  &__inner{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &-item {
+    padding-top: 66px;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    &__tree{
+      position: relative;
+      background-image: url("../img/sprite.svg#tree");
+      background-repeat: no-repeat;
+      background-size: 44px;
+      object-fit: cover;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $secondary;
+        z-index: -1;
+        bottom:77px;
+      }
+    }
+    &__moto{
+      position: relative;
+      background-image: url("../img/sprite.svg#moto");
+      background-repeat: no-repeat;
+      background-size: 44px;
+      object-fit: cover;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $secondary;
+        z-index: -1;
+        bottom:60px;
+      }
+    }
+    &__helmet{
+      position: relative;
+      background-image: url("../img/sprite.svg#helmet");
+      background-repeat: no-repeat;
+      background-size: 44px;
+      object-fit: cover;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $secondary;
+        z-index: -1;
+        bottom:77px;
+      }
+    }
+    &__personal{
+      position: relative;
+      background-image: url("../img/sprite.svg#personal");
+      background-repeat: no-repeat;
+      background-size: 44px;
+      object-fit: cover;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        background-color: $secondary;
+        z-index: -1;
+        bottom:77px;
+      }
+    }
+    &__helmet,
+    .advantages-item__tree,
+    .advantages-item__moto,
+    .advantages-item__personal,{
+    }
+    &__title{
+      @extend %montserrat-600;
+      font-size: 18px;
+      line-height: 108.7%;
+    }
+    &__text{
+      @extend %montserrat-400;
+      font-size: 16px;
+      line-height: 108.7%;
+    }
+  }
+}

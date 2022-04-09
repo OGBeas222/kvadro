@@ -1,0 +1,185 @@
+.header {
+  position: relative;
+  height: 100vh;
+  &-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    padding-top: 12px;
+  }
+
+  &-menu {
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+
+    &__elem {
+      &:not(:last-child) {
+        margin-right: 50px;
+      }
+    }
+
+    &__link {
+      color: $white;
+      @extend %montserrat-600;
+      line-height: 105%;
+    }
+  }
+
+  &-callback {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 30px;
+
+    &__img {
+      background-image: url("../img/sprite.svg#phone");
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 22px;
+      height: 16px;
+      margin-right: 13px;
+    }
+
+    &__wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+    }
+
+    &__text {
+      @extend %montserrat-600;
+      font-weight: 600;
+      font-size: 20px;
+      color: $white;
+      letter-spacing: 0.02em;
+      margin-bottom: 11px;
+    }
+
+    &__btn {
+      background-color: rgba(255, 255, 255, 0.4);
+      padding: 12px 20px;
+      border-radius: 9px;
+      color: $white;
+      cursor: pointer;
+      letter-spacing: 0.02em;
+      outline: transparent;
+      border: transparent;
+    }
+  }
+
+  &-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__elem {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-right: 12px;
+    }
+
+    &__title {
+      color: $white;
+      font-size: 70px;
+      line-height: 125.5%;
+      @extend %montserrat-800;
+      letter-spacing: 0.045em;
+      margin-bottom: 47px;
+    }
+
+    &__text {
+      color: $white;
+      @extend %montserrat-500;
+      font-size: 24px;
+      line-height: 108.7%;
+      margin-bottom: 82px;
+    }
+
+    &__btn {
+      position: relative;
+      padding: 19px 76px 19px 23px;
+      background-color: $secondary;
+      border: transparent;
+      color: $white;
+      border-radius: 9px;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 23px;
+        right: 20px;
+        background-image: url("../img/sprite.svg#header-arrow");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: 0 0;
+        width: 14px;
+        height: 10px;
+        z-index: 3;
+        text-align: center;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: $white;
+        border-radius: 50%;
+        width: 31px;
+        height: 31px;
+        right: 12px;
+        bottom: 12px;
+      }
+    }
+
+  }
+
+  &-slider {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -4;
+
+    &__item {
+      position: relative;
+      &-1{
+        position: relative;
+        background-color: rgb(39, 39, 41);
+      }
+      &-2{
+        position: relative;
+        background-color: rgb(18, 18, 20);
+      }
+    }
+
+    &__bg {
+      &-gray{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        opacity: .75;
+      }
+      &-black{
+        position: relative;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        object-fit: cover;
+        opacity: .6;
+      }
+    }
+  }
+}

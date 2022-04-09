@@ -1,0 +1,66 @@
+.team{
+  position: relative;
+  padding: 64px 0;
+  &::before{
+    position: absolute;
+    content: "";
+    background-image: url("../img/bumper2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 530px;
+    height: 498px;
+    top: -82px;
+    right: 94px;
+    z-index: -1;
+  }
+  &::after{
+    position: absolute;
+    content: "";
+    background-image: url("../img/cainster2.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 766px;
+    height: 523px;
+    bottom: -70px;
+    left: 50px;
+    z-index: -1;
+  }
+  &-inner{
+    text-align: center;
+  }
+  &-cards{
+    &__wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+  &-card{
+    max-width: 303px;
+    background-color: $background;
+    border-radius: 9px;
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+    &__wrapper{
+      padding: 17px 0 22px 26px;
+      text-align: left;
+    }
+    &__img {
+      border-top-right-radius: 9px;
+      border-top-left-radius: 9px;
+    }
+    &__name{
+      font-size: 24px;
+      line-height: 130%;
+      color: $secondary;
+      @extend %montserrat-700;
+    }
+    &__text{
+      font-size: 18px;
+      line-height: 130%;
+    }
+  }
+}
