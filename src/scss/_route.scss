@@ -151,6 +151,7 @@
     }
   }
   &-button{
+    position: relative;
     max-width: 175px;
     height: 45px;
     padding: 14px 45px;
@@ -159,6 +160,7 @@
     border: 1.5px solid $secondary;
     border-radius: 9px;
     cursor: pointer;
+    z-index: 19;
     &__blue{
       background-color: $secondary;
       color: $white;

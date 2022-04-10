@@ -1,6 +1,50 @@
 .header {
   position: relative;
   height: 100vh;
+  &-nav{
+    display: flex;
+    justify-content:center ;
+    margin: 0 auto;
+    max-width: 100%;
+    &.header--fixed{
+      opacity: 1;
+    }
+  }
+  &--fixed{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color:$secondary ;
+    padding-bottom:12px;
+    z-index: 999;
+    opacity: 0;
+    overflow: hidden;
+    transition: all .35s ease-in-out;
+
+    & .header-inner{
+      margin-bottom: 0;
+      align-items: center;
+      padding: 0;
+    }
+    & .logo{
+      position: relative;
+      top: 7px;
+      max-height: 64px;
+      max-width: 59px;
+      margin-right: 120px;
+    }
+    & .header-menu{
+      padding-top: 25px;
+      margin-right: 24px;
+    }
+    & .header-callback__img{
+      display: none;
+    }
+    & .header-callback__text{
+      display: none;
+    }
+  }
   &-inner {
     display: flex;
     align-items: flex-start;
@@ -13,7 +57,7 @@
     display: flex;
     align-items: center;
     padding-top: 30px;
-
+    margin-right: 58px;
     &__elem {
       &:not(:last-child) {
         margin-right: 50px;
@@ -39,6 +83,8 @@
       width: 22px;
       height: 16px;
       margin-right: 13px;
+
+      transition: display .2s linear;
     }
 
     &__wrapper {
@@ -55,6 +101,7 @@
       color: $white;
       letter-spacing: 0.02em;
       margin-bottom: 11px;
+      transition: display .2s linear;
     }
 
     &__btn {
@@ -90,7 +137,6 @@
       letter-spacing: 0.045em;
       margin-bottom: 47px;
     }
-
     &__text {
       color: $white;
       @extend %montserrat-500;
@@ -98,7 +144,6 @@
       line-height: 108.7%;
       margin-bottom: 82px;
     }
-
     &__btn {
       position: relative;
       padding: 19px 76px 19px 23px;

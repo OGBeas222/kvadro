@@ -1,3 +1,26 @@
+let headerNav = document.querySelector('.header-nav');
+let headerCon = document.querySelector('.header');
+let firstBlock = document.querySelector('.advantages');
+const headerHeight = headerCon.offsetHeight;
+const headerHeight2 = headerNav.offsetHeight;
+const firstHeight = firstBlock.offsetHeight;
+let lastScrollTop = 0;
+
+window.addEventListener('scroll', () => {
+    let scrollDistance = window.scrollY;
+
+    if (scrollDistance >= firstHeight + headerHeight) {
+        headerNav.classList.add('header--fixed');
+        document.querySelector('body').style.paddingTop = headerHeight2;
+    } else {
+        headerNav.classList.remove('header--fixed');
+        document.querySelector('body').style.paddingTop = null;
+    }
+    lastScrollTop = scrollDistance;
+});
+
+
+
 const anchors = document.querySelectorAll('a[href*="#"]');
 
 for( let anchor of  anchors){
