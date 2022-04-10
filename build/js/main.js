@@ -19,6 +19,75 @@ window.addEventListener('scroll', () => {
     lastScrollTop = scrollDistance;
 });
 
+const btnModal = document.querySelectorAll('.modal-btn');
+const modalOverlay = document.querySelector('.modal-overlay__large');
+
+
+btnModal.forEach((el) =>{
+    el.addEventListener('click',(e) => {
+        let path = e.currentTarget.getAttribute('data-path');
+        document.querySelector('header').style.display = 'none';
+        document.querySelector('main').style.display = 'none';
+        document.querySelector('footer').style.display = 'none';
+        modalOverlay.classList.add('modals__overlay--visible');
+        document.querySelector(`[data-target="${path}"]`).classList.add('modal--visible');
+
+    })
+})
+const closeBtn = document.querySelector('.modal-close__span');
+
+closeBtn.onclick = ()=> {
+    document.querySelector('header').style.display = 'block';
+    document.querySelector('main').style.display = 'block';
+    document.querySelector('footer').style.display = 'block'
+    modalOverlay.classList.remove('modals__overlay--visible');
+    document.querySelector(`[data-target="${path}"]`).classList.remove('modal--visible');
+}
+
+
+const visibleBLock = document.querySelector('.modal-pricing__item-front')  ;
+const elemBLock = document.querySelector('.modal-pricing__item')  ;
+const hiddenBLock =  document.querySelector('.modal-pricing__item-back')  ;
+const onclickImg =   document.querySelectorAll('.modal-flip__front-img')  ;
+const offImg =   document.querySelectorAll('.modal-flip__back-img')  ;
+
+onclickImg.forEach((el) =>{
+   el.addEventListener('click',(e) => {
+       document.querySelector('.modal-pricing__item').style.backgroundColor = "#FFF" ;
+       visibleBLock.classList.add('modal-pricing__item-front--hidden');
+       hiddenBLock.classList.add('modal-pricing__item-back--visible');
+   });
+});
+
+offImg.forEach((el) =>{
+   el.addEventListener('click',(e) => {
+       document.querySelector('.modal-pricing__item').style.backgroundColor = "#F4F4F4" ;
+       visibleBLock.classList.remove('modal-pricing__item-front--hidden');
+       hiddenBLock.classList.remove('modal-pricing__item-back--visible');
+
+   });
+});
+
+
+
+elemBLock.forEach(el =>{
+    el.addEventListener('click',(e) => {
+        const self = e.currentTarget;
+
+
+        self.classList.toggle('open');
+        if(self.classList.contains('open')){
+            control.setAttribute('aria-expended',true);
+            content.setAttribute('aria-hidden',false);
+        }else{
+            control.setAttribute('aria-expended',false);
+            content.setAttribute('aria-hidden',true);
+        }
+
+    })
+
+})
+
 
 
 const anchors = document.querySelectorAll('a[href*="#"]');
@@ -277,6 +346,23 @@ $(function() {
         loopAdditionalSlides: 30,
         pagination: {
             el: '.swiper-pagination__basic',
+            clickable:true,
+            type: 'bullets',
+        },
+    });
+
+    const modalSwiper = new Swiper('.modal-slider', {
+        speed: 550,
+        spaceBetween:0,
+        slidesPerGroup:1,
+        centeredSlides: true,
+        slidesPerView: 2,
+        initialSlide:1,
+        roundLengths: true,
+        loop: true,
+        loopAdditionalSlides: 30,
+        pagination: {
+            el: '.swiper-pagination__modal',
             clickable:true,
             type: 'bullets',
         },

@@ -38,3 +38,9 @@ $dark-800: #848484;
     z-index: -1;
   }
 }
+
+%modal-title{
+  @extend %montserrat-600;
+  font-size: 24px;
+  line-height: 29px;
+}

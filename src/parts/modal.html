@@ -1,5 +1,82 @@
-<div class="modal">
-    <div class="container">
+<div class="modal-overlay__large">
+        <div class="container">
+            <div class="modal-close__span">
+                <img class="modal-close" width="20" height="20" src="../img/sprite.svg#close" alt="">
+            </div>
+            <div class="modal-large" data-target="one">
+                @@include('modal-slider.html', { 'title':'Экскурсия “РИО”' })
+                <div class="modal-info container-modal">
+                    <h6 class="modal-title">
+                        Что посмотрим на маршруте:
+                    </h6>
 
-    </div>
+                    <div class="modal-text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Augue lacus lacus facilisis orci nibh diam. Nisi, a et sit commodo.
+                            Pretium sed consectetur risus elementum, habitasse turpis massa.
+                        </p>
+
+                        <p>
+                            In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                            Vitae venenatis ut praesent neque sed quam mauris elementum.
+                            Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.
+                            Gravida et faucibus id tortor augue interdum quam sit diam.
+                            Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in nullam ipsum est.
+                            In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                            Vitae venenatis ut praesent neque sed quam mauris elementum.
+                            Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.
+                        </p>
+                    </div>
+
+
+                    <div class="modal-pricing">
+
+                        <h6 class="modal-title__mb">
+                            Стоимость экскурсии за 1 квадроцикл:
+                        </h6>
+
+                        <div class="modal-pricing__wrapper">
+
+                            @@include('elements/modal-card.html',{
+                                'text' : 'UFORCE 1000 EPS (U10 EPS)',
+                                'price' : '4000',
+                                'src' : 'img/modal.jpg',
+                                'data-on' : '1',
+                                'data-off' : '1',
+                            })   @@include('elements/modal-card.html',{
+                                'text' : 'CFORCE 1000 EPS (X10 EPS)',
+                                'price' : '6000',
+                                'src' : 'img/modal-2.jpg',
+                                'data' : '2'
+                            })   @@include('elements/modal-card.html',{
+                                'text' : 'CFMOTO CFORCE 600 EPS',
+                                'price' : '7000',
+                                'src' : 'img/modal-3.jpg',
+                                'data' : '3'
+                            })   @@include('elements/modal-card.html',{
+                                'text' : 'CFORCE 400L EPS (X4 EPS)',
+                                'price' : '8000',
+                                'src' : 'img/modal-4.jpg',
+                                'data' : '4'
+                            })   @@include('elements/modal-card.html',{
+                                'text' : 'ZFORCE 1000',
+                                'price' : '9000',
+                                'src' : 'img/modal-5.jpg',
+                                'data' : '5'
+                            })   @@include('elements/modal-card.html',{
+                                'text' : 'UFORCE 1000 EPS (U10 EPS)',
+                                'price' : '4000',
+                                'src' : 'img/modal.jpg',
+                                'data' : '6'
+                            })
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
 </div>

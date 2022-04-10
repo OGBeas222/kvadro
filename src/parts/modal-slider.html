@@ -1,0 +1,81 @@
+<div class="modal-slider">
+
+<!--    <div class="container">-->
+        <div class="modal-inner">
+
+
+            <div class="route-content">
+                <div class="route-content__top">
+                    <span class="route-content__top-line"></span>
+                </div>
+                <div class="route-content__wrapper">
+                    <h3 class="route-content__title">
+                        @@title <br>
+                    </h3>
+                    <ul class="route-list">
+                        <li class="route-list__elem route-list__elem--clock">
+                            <p class="route-list__text">
+                                Время в пути:
+                                <span class="route-list__text-num">1,5 - 2 часа</span>
+                            </p>
+                        </li>
+                        <li class="route-list__elem route-list__elem--route">
+                            <p class="route-list__text">
+                                Расстояние:
+                                <span class="route-list__text-num">20 - 25 км</span>
+                            </p>
+                        </li>
+                        <li class="route-list__elem route-list__elem--star">
+                            <p class="route-list__text">
+                                Сложность:
+                                <span class="route-list__text-num">5*** </span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="route-ways">
+                        <p class="route-ways__title route-ways__title-img">
+                            маршрут
+                        </p>
+                        <p class="route-ways__text">
+                            Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - <br/>
+                            -Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) -<br/>
+                            -Форсаж
+                        </p>
+                    </div>
+                    @@include('elements/_modal-btn.html',{})
+                </div>
+            </div>
+
+            <div class="slider-box slider-box--modal">
+                <div class="modal-slider swiper">
+                    <div class="modal-slider__wrapper swiper-wrapper">
+                        <div class="modal-slider__item swiper-slide">
+                            <img class="modal-slider__item-img" width="315" height="315" src="../img/slide.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
+
+                        <div class="modal-slider__item swiper-slide">
+                            <img class="modal-slider__item-img" width="315" height="315" src="../img/slide-2.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
+
+
+                        <div class="modal-slider__item swiper-slide">
+                            <img class="modal-slider__item-img" width="315" height="315" src="../img/slide-3.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-basic__pagination">
+                    <div class="swiper-pagination__modal"></div>
+                    <div class="modal-basic__bullets-content">
+                        <span class="slide-line__dark"></span>
+                        <p class="route-bullets__text">scroll</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    </div>-->
+</div>

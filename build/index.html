@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/plugins.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Main Page</title>
@@ -68,7 +67,7 @@
                     <p class="header-content__text">
                         приезжайте за новыми ощущениями и эмоциями!
                     </p>
-                    <button class="header-content__btn">
+                    <button data-path="one" class="header-content__btn modal-btn">
                         Подобрать маршрут
                     </button>
                 </div>
@@ -136,104 +135,104 @@
 
     <section class="route" id="route">
     <div class="route-bg__img"> </div>
-        <div class="route-basic">
 
-        <h3 class="title route-title">
-            Наши маршруты
-        </h3>
+    <div class="route-basic">
 
-        <div class="container">
-            <div class="route-inner">
+    <h3 class="title route-title">
+        Наши маршруты
+    </h3>
+
+    <div class="container">
+        <div class="route-inner">
 
 
-                <div class="route-content">
-                    <div class="route-content__top">
-                        <span class="route-content__top-line"></span>
-                    </div>
-                    <div class="route-content__wrapper">
-                        <h3 class="route-content__title">
-                            БАЗОВЫЙ <br/>
-                            <span class="route-content__title-price rub-sign">
-                                 от 4000
-                            </span>
-                        </h3>
-                        <ul class="route-list">
-                            <li class="route-list__elem route-list__elem--clock">
-                                <p class="route-list__text">
-                                    Время в пути:
-                                    <span class="route-list__text-num">1,5 - 2 часа</span>
-                                </p>
-                            </li>
-                            <li class="route-list__elem route-list__elem--route">
-                                <p class="route-list__text">
-                                    Расстояние:
-                                    <span class="route-list__text-num">20 - 25 км</span>
-                                </p>
-                            </li>
-                            <li class="route-list__elem route-list__elem--star">
-                                <p class="route-list__text">
-                                    Сложность:
-                                    <span class="route-list__text-num">5*** </span>
-                                </p>
-                            </li>
-                        </ul>
-                        <div class="route-ways">
-                            <p class="route-ways__title route-ways__title-img">
-                                маршрут
-                            </p>
-                            <p class="route-ways__text">
-                                Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - <br/>
-                                -Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) -<br/>
-                                -Форсаж
-                            </p>
-                        </div>
-                        <div class="route-buttons">
-                            <button class="route-button route-button__light">
-                                Подробнее
-                            </button>
-                            <button class="route-button route-button__blue">
-                                Забронировать
-                            </button>
-                        </div>
-                    </div>
+            <div class="route-content">
+                <div class="route-content__top">
+                    <span class="route-content__top-line"></span>
                 </div>
+                <div class="route-content__wrapper">
+                    <h3 class="route-content__title">
+                         БАЗОВЫЙ <br>
+                        <span class="route-content__title-price rub-sign">
+                               от 4000
+                            </span>
+                    </h3>
+                    <ul class="route-list">
+                        <li class="route-list__elem route-list__elem--clock">
+                            <p class="route-list__text">
+                                Время в пути:
+                                <span class="route-list__text-num">1,5 - 2 часа</span>
+                            </p>
+                        </li>
+                        <li class="route-list__elem route-list__elem--route">
+                            <p class="route-list__text">
+                                Расстояние:
+                                <span class="route-list__text-num">20 - 25 км</span>
+                            </p>
+                        </li>
+                        <li class="route-list__elem route-list__elem--star">
+                            <p class="route-list__text">
+                                Сложность:
+                                <span class="route-list__text-num">5*** </span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="route-ways">
+                        <p class="route-ways__title route-ways__title-img">
+                            маршрут
+                        </p>
+                        <p class="route-ways__text">
+                            Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - <br/>
+                            -Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) -<br/>
+                            -Форсаж
+                        </p>
+                    </div>
+                    <div class="route-buttons">
+    <button class="route-button route-button__light">
+        Подробнее
+    </button>
+    <button class="route-button route-button__blue">
+        Забронировать
+    </button>
+</div>
+                </div>
+            </div>
 
-                <div class="slider-box">
-                    <div class="route-slider swiper">
-                        <div class="route-slider__wrapper swiper-wrapper">
-                            <div class="route-slider__item swiper-slide">
-                                <img class="route-slider__item-img" width="360" height="360" src="../img/slide.jpg"
-                                     alt="картинка: квадрацикл в поле">
-                            </div>
+            <div class="slider-box">
+                <div class="route-slider swiper">
+                    <div class="route-slider__wrapper swiper-wrapper">
+                        <div class="route-slider__item swiper-slide">
+                            <img class="route-slider__item-img" width="360" height="360" src="../img/slide.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
 
-                            <div class="route-slider__item swiper-slide">
-                                <img class="route-slider__item-img" width="360" height="360" src="../img/slide-2.jpg"
-                                     alt="картинка: квадрацикл в поле">
-                            </div>
+                        <div class="route-slider__item swiper-slide">
+                            <img class="route-slider__item-img" width="360" height="360" src="../img/slide-2.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
 
 
-                            <div class="route-slider__item swiper-slide">
-                                <img class="route-slider__item-img" width="360" height="360" src="../img/slide-3.jpg"
-                                     alt="картинка: квадрацикл в поле">
-                            </div>
-
+                        <div class="route-slider__item swiper-slide">
+                            <img class="route-slider__item-img" width="360" height="360" src="../img/slide-3.jpg"
+                                 alt="картинка: квадрацикл в поле">
                         </div>
 
                     </div>
-                    <div class="route-basic__pagination">
-                        <div class="swiper-pagination__basic"></div>
-                        <div class="route-basic__bullets-content">
-                            <span class="slide-line__dark"></span>
-                            <p class="route-bullets__text">scroll</p>
-                        </div>
+
+                </div>
+                <div class="route-basic__pagination">
+                    <div class="swiper-pagination__basic"></div>
+                    <div class="route-basic__bullets-content">
+                        <span class="slide-line__dark"></span>
+                        <p class="route-bullets__text">scroll</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-        <!--basic-->
-        <div class="route-extend">
+</div>
 
+    <div class="route-extend">
 
             <div class="container">
                 <div class="route-inner route-inner__reverse">
@@ -322,13 +321,9 @@
                             <div class="swiper-pagination__extend"></div>
                         </div>
                     </div>
-
-
                 </div>
-
             </div>
         </div>
-
 
     <div class="route-experience">
         <div class="route-experience__bg"></div>
@@ -398,15 +393,11 @@
                                 <img class="route-slider__item-img" width="360" height="360" src="../img/slide-6.jpg"
                                      alt="картинка: квадрацикл в поле">
                             </div>
-
-
                             <div class="route-slider__item swiper-slide">
                                 <img class="route-slider__item-img" width="360" height="360" src="../img/slide-3.jpg"
                                      alt="картинка: квадрацикл в поле">
                             </div>
-
                         </div>
-
                     </div>
                     <div class="route-experience__pagination">
                         <div class="route-experience__bullets-content">
@@ -438,6 +429,7 @@
         </div>
     </div>
 </section>
+
 
     <section class="gallery" id="gallery">
     <div class="container">
@@ -856,7 +848,6 @@
 </section>
 
 </main>
-
 <footer class="footer" id="footer">
     <div class="container">
         <div class="footer-contacts__inner">
@@ -968,6 +959,315 @@
 </footer>
 
 
+<div class="modal-overlay__large">
+        <div class="container">
+            <div class="modal-close__span">
+                <img class="modal-close" width="20" height="20" src="../img/sprite.svg#close" alt="">
+            </div>
+            <div class="modal-large" data-target="one">
+                <div class="modal-slider">
+
+<!--    <div class="container">-->
+        <div class="modal-inner">
+
+
+            <div class="route-content">
+                <div class="route-content__top">
+                    <span class="route-content__top-line"></span>
+                </div>
+                <div class="route-content__wrapper">
+                    <h3 class="route-content__title">
+                        Экскурсия “РИО” <br>
+                    </h3>
+                    <ul class="route-list">
+                        <li class="route-list__elem route-list__elem--clock">
+                            <p class="route-list__text">
+                                Время в пути:
+                                <span class="route-list__text-num">1,5 - 2 часа</span>
+                            </p>
+                        </li>
+                        <li class="route-list__elem route-list__elem--route">
+                            <p class="route-list__text">
+                                Расстояние:
+                                <span class="route-list__text-num">20 - 25 км</span>
+                            </p>
+                        </li>
+                        <li class="route-list__elem route-list__elem--star">
+                            <p class="route-list__text">
+                                Сложность:
+                                <span class="route-list__text-num">5*** </span>
+                            </p>
+                        </li>
+                    </ul>
+                    <div class="route-ways">
+                        <p class="route-ways__title route-ways__title-img">
+                            маршрут
+                        </p>
+                        <p class="route-ways__text">
+                            Смотровая - Родник - Камень Джигита - Адербиевка - Гора Нексис - <br/>
+                            -Грозовые Ворота - Шашлыки - Цыгельский водопад (чаша любви) -<br/>
+                            -Форсаж
+                        </p>
+                    </div>
+                    <div class="route-buttons">
+    <button class="route-button route-button__light btn__p">
+        Схема маршрута
+    </button>
+</div>
+                </div>
+            </div>
+
+            <div class="slider-box slider-box--modal">
+                <div class="modal-slider swiper">
+                    <div class="modal-slider__wrapper swiper-wrapper">
+                        <div class="modal-slider__item swiper-slide">
+                            <img class="modal-slider__item-img" width="315" height="315" src="../img/slide.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
+
+                        <div class="modal-slider__item swiper-slide">
+                            <img class="modal-slider__item-img" width="315" height="315" src="../img/slide-2.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
+
+
+                        <div class="modal-slider__item swiper-slide">
+                            <img class="modal-slider__item-img" width="315" height="315" src="../img/slide-3.jpg"
+                                 alt="картинка: квадрацикл в поле">
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="modal-basic__pagination">
+                    <div class="swiper-pagination__modal"></div>
+                    <div class="modal-basic__bullets-content">
+                        <span class="slide-line__dark"></span>
+                        <p class="route-bullets__text">scroll</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+<!--    </div>-->
+</div>
+                <div class="modal-info container-modal">
+                    <h6 class="modal-title">
+                        Что посмотрим на маршруте:
+                    </h6>
+
+                    <div class="modal-text">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                            Augue lacus lacus facilisis orci nibh diam. Nisi, a et sit commodo.
+                            Pretium sed consectetur risus elementum, habitasse turpis massa.
+                        </p>
+
+                        <p>
+                            In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                            Vitae venenatis ut praesent neque sed quam mauris elementum.
+                            Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.
+                            Gravida et faucibus id tortor augue interdum quam sit diam.
+                            Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in nullam ipsum est.
+                            In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                            Vitae venenatis ut praesent neque sed quam mauris elementum.
+                            Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.
+                        </p>
+                    </div>
+
+
+                    <div class="modal-pricing">
+
+                        <h6 class="modal-title__mb">
+                            Стоимость экскурсии за 1 квадроцикл:
+                        </h6>
+
+                        <div class="modal-pricing__wrapper">
+
+                            <div class="modal-pricing__item">
+    <div class="modal-pricing__item-front" 1>
+        <img class="modal-flip__front-img" 1 width="32" height="32" src="../img/sprite.svg#info-link" alt="">
+        <img class="modal-pricing__item-img" width="303" height="222" src="img/modal.jpg" alt="" >
+        <div class="modal-pricing__item-content">
+            <p class="modal-pricing__item-text">
+                UFORCE 1000 EPS (U10 EPS)
+            </p>
+            <span class="modal-pricing__item-cost modal-pricing__item-cost--img">
+                4000
+            </span>
+        </div>
+    </div>
+    <div class="modal-pricing__item-back" 1>
+        <div class="modal-pricing__back-text" 1>
+            <img class="modal-flip__back-img" width="32" height="32" src="../img/sprite.svg#cross-black" alt="">
+            <p>
+                Мощность:
+                <span>72 л.с.</span>
+            </p>
+
+            <p>
+                Двигатель:
+                <span>1000 см3</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+   <div class="modal-pricing__item">
+    <div class="modal-pricing__item-front" 2-off>
+        <img class="modal-flip__front-img" 2-on width="32" height="32" src="../img/sprite.svg#info-link" alt="">
+        <img class="modal-pricing__item-img" width="303" height="222" src="img/modal-2.jpg" alt="" >
+        <div class="modal-pricing__item-content">
+            <p class="modal-pricing__item-text">
+                CFORCE 1000 EPS (X10 EPS)
+            </p>
+            <span class="modal-pricing__item-cost modal-pricing__item-cost--img">
+                6000
+            </span>
+        </div>
+    </div>
+    <div class="modal-pricing__item-back" 2-on>
+        <div class="modal-pricing__back-text" 2-off>
+            <img class="modal-flip__back-img" width="32" height="32" src="../img/sprite.svg#cross-black" alt="">
+            <p>
+                Мощность:
+                <span>72 л.с.</span>
+            </p>
+
+            <p>
+                Двигатель:
+                <span>1000 см3</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+   <div class="modal-pricing__item">
+    <div class="modal-pricing__item-front" 3-off>
+        <img class="modal-flip__front-img" 3-on width="32" height="32" src="../img/sprite.svg#info-link" alt="">
+        <img class="modal-pricing__item-img" width="303" height="222" src="img/modal-3.jpg" alt="" >
+        <div class="modal-pricing__item-content">
+            <p class="modal-pricing__item-text">
+                CFMOTO CFORCE 600 EPS
+            </p>
+            <span class="modal-pricing__item-cost modal-pricing__item-cost--img">
+                7000
+            </span>
+        </div>
+    </div>
+    <div class="modal-pricing__item-back" 3-on>
+        <div class="modal-pricing__back-text" 3-off>
+            <img class="modal-flip__back-img" width="32" height="32" src="../img/sprite.svg#cross-black" alt="">
+            <p>
+                Мощность:
+                <span>72 л.с.</span>
+            </p>
+
+            <p>
+                Двигатель:
+                <span>1000 см3</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+   <div class="modal-pricing__item">
+    <div class="modal-pricing__item-front" 4-off>
+        <img class="modal-flip__front-img" 4-on width="32" height="32" src="../img/sprite.svg#info-link" alt="">
+        <img class="modal-pricing__item-img" width="303" height="222" src="img/modal-4.jpg" alt="" >
+        <div class="modal-pricing__item-content">
+            <p class="modal-pricing__item-text">
+                CFORCE 400L EPS (X4 EPS)
+            </p>
+            <span class="modal-pricing__item-cost modal-pricing__item-cost--img">
+                8000
+            </span>
+        </div>
+    </div>
+    <div class="modal-pricing__item-back" 4-on>
+        <div class="modal-pricing__back-text" 4-off>
+            <img class="modal-flip__back-img" width="32" height="32" src="../img/sprite.svg#cross-black" alt="">
+            <p>
+                Мощность:
+                <span>72 л.с.</span>
+            </p>
+
+            <p>
+                Двигатель:
+                <span>1000 см3</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+   <div class="modal-pricing__item">
+    <div class="modal-pricing__item-front" 5-off>
+        <img class="modal-flip__front-img" 5-on width="32" height="32" src="../img/sprite.svg#info-link" alt="">
+        <img class="modal-pricing__item-img" width="303" height="222" src="img/modal-5.jpg" alt="" >
+        <div class="modal-pricing__item-content">
+            <p class="modal-pricing__item-text">
+                ZFORCE 1000
+            </p>
+            <span class="modal-pricing__item-cost modal-pricing__item-cost--img">
+                9000
+            </span>
+        </div>
+    </div>
+    <div class="modal-pricing__item-back" 5-on>
+        <div class="modal-pricing__back-text" 5-off>
+            <img class="modal-flip__back-img" width="32" height="32" src="../img/sprite.svg#cross-black" alt="">
+            <p>
+                Мощность:
+                <span>72 л.с.</span>
+            </p>
+
+            <p>
+                Двигатель:
+                <span>1000 см3</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+   <div class="modal-pricing__item">
+    <div class="modal-pricing__item-front" 6-off>
+        <img class="modal-flip__front-img" 6-on width="32" height="32" src="../img/sprite.svg#info-link" alt="">
+        <img class="modal-pricing__item-img" width="303" height="222" src="img/modal.jpg" alt="" >
+        <div class="modal-pricing__item-content">
+            <p class="modal-pricing__item-text">
+                UFORCE 1000 EPS (U10 EPS)
+            </p>
+            <span class="modal-pricing__item-cost modal-pricing__item-cost--img">
+                4000
+            </span>
+        </div>
+    </div>
+    <div class="modal-pricing__item-back" 6-on>
+        <div class="modal-pricing__back-text" 6-off>
+            <img class="modal-flip__back-img" width="32" height="32" src="../img/sprite.svg#cross-black" alt="">
+            <p>
+                Мощность:
+                <span>72 л.с.</span>
+            </p>
+
+            <p>
+                Двигатель:
+                <span>1000 см3</span>
+            </p>
+
+        </div>
+    </div>
+</div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+</div>
 
 <script
         src="https://code.jquery.com/jquery-3.6.0.min.js"
