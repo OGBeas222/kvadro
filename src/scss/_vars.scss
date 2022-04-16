@@ -1,0 +1,52 @@
+$white: #FFFFFF;
+$accent: #121214;
+$secondary: #037E8C;
+$background: #F4F4F4;
+$dark-800: #848484;
+
+%montserrat-800{
+  font-family: 'Montserrat-ExtraBold',sans-serif;
+  font-weight: 800;
+}
+%montserrat-700{
+  font-family: 'Montserrat-Bold',sans-serif;
+  font-weight: 700;
+}
+%montserrat-600{
+  font-family: 'Montserrat-SemiBold',sans-serif;
+  font-weight: 600;
+}
+%montserrat-500{
+  font-family: 'Montserrat-Medium',sans-serif;
+  font-weight: 500;
+}
+%montserrat-400{
+  font-family: 'Montserrat-Regular',sans-serif;
+  font-weight: 400;
+}
+%future-400{
+  font-family: 'FuturaPT-Light',sans-serif;
+  font-weight: 400;
+}
+
+%radio-bg{
+  &::before{
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background-color: $secondary;
+    z-index: -1;
+  }
+}
+
+%modal-title{
+  @extend %montserrat-600;
+  font-size: 24px;
+  line-height: 29px;
+}
+
+%button-bg{
+  outline: transparent;
+  background-color: transparent;
+  border: transparent;
+}

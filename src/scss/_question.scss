@@ -1,0 +1,75 @@
+.question {
+  position: relative;
+  padding-top: 71px;
+  padding-bottom: 85px;
+  &::before {
+    content: "";
+    position: absolute;
+    left: -251px;
+    bottom: -211px;
+    width: 543px;
+    height: 596px;
+    background-image: url("../img/sprite.svg#pump");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0px;
+    top: -211px;
+    width: 543px;
+    height: 596px;
+    background-image: url("../img/sprite.svg#buggy");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+  &-title {
+    margin-bottom: 46px;
+  }
+
+  &-inner {
+    display: flex;
+  }
+  &-content {
+    position: relative;
+    top: 22px;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 378px;
+  }
+
+  &-chat {
+    width: 94px;
+    height: 94px;
+    margin-bottom: 25px;
+  }
+
+  &-subtitle {
+    @extend %montserrat-600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 14px;
+  }
+
+  &-text {
+    text-align: center;
+    line-height: 17px;
+    margin-bottom: 31px;
+  }
+
+  &-btn {
+    border: transparent;
+    background-color: $secondary;
+    border-radius: 9px;
+    color: $white;
+    padding: 14px 33px;
+  }
+}

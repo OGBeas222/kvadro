@@ -1,0 +1,146 @@
+@media(max-width: 1440px) {
+
+  .logo {
+    position: absolute;
+    left: 0;
+  }
+
+  .header {
+    &-content {
+      &__title {
+        margin-bottom: 35px;
+        font-size: 60px;
+      }
+    }
+
+    &-callback {
+      &__text {
+        font-size: 18px;
+      }
+
+      &__btn {
+        padding: 10px 18px;
+      }
+    }
+  }
+}
+
+@media(max-width: 1200px) {
+
+  .logo {
+    width: 100px;
+    height: 123px;
+
+    &-link {
+      margin-right: 120px;
+      width: 100px;
+      height: 123px;
+    }
+  }
+
+
+  .header {
+    &-content {
+      padding-left: 27px;
+
+      &__title {
+        margin-bottom: 28px;
+        font-size: 60px;
+      }
+
+      &__text {
+        margin-bottom: 50px;
+      }
+
+      &__elem {
+        padding-right: 0px;
+      }
+    }
+
+    &-menu {
+      padding-top: 36px;
+      margin-right: 0;
+
+      &__elem {
+        &:not(:last-child) {
+          margin-right: 35px;
+        }
+      }
+    }
+
+    &-inner {
+      margin-bottom: 135px;
+    }
+  }
+}
+
+@media(max-width: 992px) {
+
+  .logo {
+    left: 9px;
+  }
+
+  .header{
+    &__bg--active{
+      background-color: rgba(18, 18, 20, 0.8);
+      //&::before{
+      //  position: absolute;
+      //  background-color: rgba(18, 18, 20, 0.8);
+      //  content: "";
+      //  top: 0;
+      //  right: 0;
+      //  left: 0;
+      //  bottom: 0;
+      //  opacity: 1;
+      //}
+    }
+    &-callback {
+      display: none;
+    }
+    &-menu {
+      transform: translateY(-200%);
+      position: absolute;
+      top: 155px;
+      left: 0px;
+      right: 0px;
+      bottom: 0;
+      background-color: #4e4e4e;
+      transition: all .45s ease-in-out;
+      display: block;
+      text-align: left;
+      padding: 13px 0;
+      z-index: 22;
+      &.menu--active {
+        transform: translateY(0%);
+      }
+
+      &__elem{
+        padding-left: 32px;
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 53px;
+        }
+      }
+    }
+    &-navigation{
+      padding-top: 18px;
+    }
+  }
+
+
+
+
+  .header-menu__elem-tel {
+    display: block;
+  }
+
+  .header {
+    &-burger {
+      top: 44px;
+      position: absolute;
+      right: 12px;
+      display: block;
+    }
+  }
+
+}

@@ -1,0 +1,82 @@
+.video{
+  position: relative;
+  padding:82px 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color:rgba(18, 18, 20, 0.75);
+  }
+  &-wrapper{
+    display:  flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &-popup{
+    position: relative;
+    width: 83px;
+    height: 83px;
+    background-size: 83px;
+    background-repeat: no-repeat;
+    //&:before{
+    //  content: "";
+    //  position: absolute;
+    //  background-image: url();
+    //}
+    &__wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-grow: 1;
+      position: relative;
+      border: 7px solid $white;
+      border-radius: 12px;
+      max-width: 1078px;
+      height: 430px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      &:after{
+        position: absolute;
+        content: "Название видео";
+        top: 30px;
+        left: 40px;
+        font-size: 24px;
+        line-height: 130%;
+        color:$white;
+        @extend %montserrat-500;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
+  }
+  &-name{
+    position: relative;
+    top: 30px;
+    left: 40px;
+    font-size: 24px;
+    line-height: 130%;
+    color:$white;
+    @extend %montserrat-500;
+  }
+  &-button{
+    display: flex;
+    align-self: center;
+    justify-self: center;
+    align-items: center;
+    justify-content: center;
+    &__img{
+      width: 83px;
+      height: 83px;
+      background-size: 83px;
+    }
+  }
+}

@@ -1,0 +1,123 @@
+<div class="modal-overlay__large">
+    <div class="container">
+        <div class="modal-close__span">
+            <img class="modal-close" width="20" height="20" src="../img/sprite.svg#close" alt="">
+        </div>
+        <div class="modal-large" data-target="one">
+            @@include('modal-slider.html', { 'title':'Экскурсия “РИО”' })
+            <div class="modal-info container-modal">
+                <h6 class="modal-title">
+                    Что посмотрим на маршруте:
+                </h6>
+
+                <div class="modal-text">
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Augue lacus lacus facilisis orci nibh diam. Nisi, a et sit commodo.
+                        Pretium sed consectetur risus elementum, habitasse turpis massa.
+                    </p>
+
+                    <p>
+                        In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                        Vitae venenatis ut praesent neque sed quam mauris elementum.
+                        Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.
+                        Gravida et faucibus id tortor augue interdum quam sit diam.
+                        Laoreet nulla at et arcu pellentesque massa placerat elit. Adipiscing in nullam ipsum est.
+                        In sit mi aenean volutpat. Quis lectus nunc nam euismod ultrices aenean.
+                        Vitae venenatis ut praesent neque sed quam mauris elementum.
+                        Risus blandit leo ut nullam egestas et porta. Ut lacus arcu sagittis sit.
+                    </p>
+                </div>
+
+
+                <div class="modal-pricing">
+
+                    <h6 class="modal-title__mb">
+                        Стоимость экскурсии за 1 квадроцикл:
+                    </h6>
+
+                    <div class="modal-pricing__wrapper">
+
+                        @@include('elements/modal-card.html',{
+                        'text' : 'UFORCE 1000 EPS (U10 EPS)',
+                        'price' : '4000',
+                        'src' : 'img/modal.jpg',
+                        'data-on' : 'aria-hidden="true"',
+                        'data-off' : 'aria-hidden="false"'
+                        }) @@include('elements/modal-card.html',{
+                        'text' : 'CFORCE 1000 EPS (X10 EPS)',
+                        'price' : '6000',
+                        'src' : 'img/modal-2.jpg',
+                        'data-on' : 'aria-hidden="true"',
+                        'data-off' : 'aria-hidden="false"'
+                        }) @@include('elements/modal-card.html',{
+                        'text' : 'CFMOTO CFORCE 600 EPS',
+                        'price' : '7000',
+                        'src' : 'img/modal-3.jpg',
+                        'data-on' : 'aria-hidden="true"',
+                        'data-off' : 'aria-hidden="false"'
+                        }) @@include('elements/modal-card.html',{
+                        'text' : 'CFORCE 400L EPS (X4 EPS)',
+                        'price' : '8000',
+                        'src' : 'img/modal-4.jpg',
+                        'data-on' : 'aria-hidden="true"',
+                        'data-off' : 'aria-hidden="false"'
+                        }) @@include('elements/modal-card.html',{
+                        'text' : 'ZFORCE 1000',
+                        'price' : '9000',
+                        'src' : 'img/modal-5.jpg',
+                        'data-on' : 'aria-hidden="true"',
+                        'data-off' : 'aria-hidden="false"'
+                        }) @@include('elements/modal-card.html',{
+                        'text' : 'UFORCE 1000 EPS (U10 EPS)',
+                        'price' : '4000',
+                        'src' : 'img/modal.jpg',
+                        'data-on' : 'aria-hidden="true"',
+                        'data-off' : 'aria-hidden="false"'
+                        })
+                    </div>
+
+                </div>
+
+
+            </div>
+            <div class="modal-form" style="background-image: url('../img/form-bg.jpg')">
+                <div class="container-modal">
+                    <h6 class="modal-title">
+                        Бронирование онлайн
+                    </h6>
+                    <form class="modal-form__content">
+
+                        <div class="modal-form__elem modal-form__elem--date">
+                            <label class="modal-form__label">Желаемая дата</label>
+                            <input class="modal-form__date" id="datepicker" type="text">
+                        </div>
+                        <div class="modal-form__elem">
+                            <label class="modal-form__label">Количество человек дата</label>
+                            <div class="modal-form__count">
+                                <button class="modal-form__count-decrement">
+                                    <span class="modal-form__count-minus"></span>
+                                </button>
+                                <span class="modal-form__count-num--inner">
+                                      <p class="modal-form__count-num">3</p>
+                                </span>
+                                <button class="modal-form__count-decrement">
+                                    <span class="modal-form__count-plus"></span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="modal-form__elem modal-form__elem--call">
+                            <label class="modal-form__label">Телефон или WhatsApp</label>
+                            <input class="modal-form__tel" type="tel">
+                        </div>
+                        <div class="modal-form__elem modal-form__elem--client">
+                            <label class="modal-form__label">Как к Вам обращаться?</label>
+                            <input class="modal-form__name" type="text">
+                        </div>
+                    </form>
+                    <button class="modal-form__submitted">Забронировать</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

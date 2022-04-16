@@ -1,0 +1,96 @@
+.proposition{
+  padding: 64px 0 75px 0;
+  &-title{
+    margin-bottom: 45px;
+  }
+  &-inner{
+    position: relative;
+    display: flex;
+    &::before{
+      content: "";
+      position: absolute;
+      width: 654px;
+      height: 566px;
+      top: -237px;
+      left: -193px;
+      background-image: url("../img/buggy.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      z-index: -1;
+    }
+    &::after{
+      content: "";
+      position: absolute;
+      height: 266px;
+      width: 528px;
+      bottom: -170px;
+      right: -225px;
+      background-image: url("../img/detail.png");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+  &-card{
+    border-radius: 9px;
+    display: flex;
+    max-width: 636px;
+    max-height: 311px;
+    background-color: $background;
+    z-index: 11;
+    &:not(:last-child){
+      margin-right: 29px;
+    }
+    &__img{
+      border-radius: 9px;
+    }
+    &__subtitle{
+      color:$secondary;
+      font-size: 36px;
+      line-height: 140%;
+      @extend %montserrat-800;
+      &--mb1{
+        margin-bottom: 19px;
+      }
+    }
+    &__text{
+      color:$secondary;
+      @extend %montserrat-700;
+      font-size: 24px;
+      line-height: 140%;
+      margin-bottom: 13px;
+      &-info{
+        font-size: 18px;
+        line-height: 130%;
+        &--mb1{
+          margin-bottom: 14px;
+        }
+      }
+    }
+    &__content-inner{
+      position: relative;
+      padding: 26px 15px 0 30px;
+      &::before{
+        content: "";
+        position: absolute;
+        width: 297px;
+        height: 157px;
+        bottom: 0;
+        right: 0;
+        background-image: url("../img/sprite.svg#proposition-card-bg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-bottom-right-radius: 9px;
+      }
+    }
+    &__btn{
+      background-color: transparent;
+      border: 1px solid $secondary;
+      @extend %montserrat-600;
+      padding: 14px 45px;
+      color:$secondary;
+      border-radius:9px ;
+    }
+  }
+}

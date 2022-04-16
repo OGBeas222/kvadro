@@ -1,0 +1,55 @@
+.services{
+  padding: 50px 0 82px 0;
+  background-color: $background;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center -318px;
+  &-inner{
+    display: flex;
+    flex-direction: column;
+
+  }
+  &-title{
+    margin-bottom: 43px;
+  }
+  &-card{
+    display: flex;
+    max-width: 413px;
+    background-color: $white;
+    padding-left:5px ;
+    border-radius: 9px;
+    &__wrapper{
+      display: grid;
+      justify-self:center ;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: minmax(107px,1fr);
+      grid-gap: 30px;
+    }
+    &__info{
+      &-text{
+        line-height: 150%;
+        padding: 9px 27px 14px 0;
+        &--bold{
+          @extend %montserrat-600;
+          text-transform: uppercase;
+        }
+      }
+      &-submitted{
+        display: flex;
+        flex-shrink: 0;
+        position: relative;
+        top: 12px;
+        display: block;
+        background-image: url("../img/sprite.svg#submitted");
+        background-color: $secondary;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        width: 42px;
+        height: 42px;
+        margin-right: 18px;
+        border-radius: 50%;
+      }
+    }
+  }
+}

@@ -1,0 +1,414 @@
+.modal-large{
+  background-color: $white;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  border-radius: 9px;
+  padding-top: 40px;
+  overflow: hidden;
+}
+
+.modal-overlay__large{
+  position: fixed;
+  background-color: rgba(18, 18, 20, 0.8);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease-in-out;
+  z-index: -22;
+  min-height: 100vh;
+  overflow-y: scroll;
+}
+
+.modals__overlay--visible{
+  opacity: 1;
+  visibility: visible;
+  transition: all .3s ease-in-out;
+  z-index: 10000;
+}
+
+.modal-inner{
+  display: flex;
+  align-items: flex-start;
+  margin-right: calc(50% - 50vw);
+  min-width: 0;
+  margin-bottom: 65px;
+}
+
+.modal-slider{
+  transition: all .3s ease-in-out;
+  z-index: 22;
+  margin-bottom: 27px;
+}
+
+.modal--visible{
+  opacity: 1;
+  visibility: visible;
+  transition: all .3s ease-in-out;
+}
+
+.modal-close__span{
+  display: flex;
+  justify-content: flex-end;
+  padding: 45px 0 40px 0;
+  cursor:pointer;
+}
+
+.btn__p{
+  padding: 13px 24px;
+}
+
+.modal-info,.modal-title,.modal-text{
+  position: relative;
+  z-index: 101000;
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-title{
+ @extend %modal-title;
+  margin-bottom: 27px;
+  &__mb{
+    margin-bottom: 45px;
+    @extend %modal-title;
+  }
+}
+
+.modal-text{
+  font-size: 16px;
+  line-height: 160%;
+  margin-bottom: 45px;
+  & p:not(:last-child) {
+    margin-bottom: 35px;
+  }
+}
+
+.modal-pricing{
+  &__wrapper{
+    padding-bottom: 74px;
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 24px;
+  }
+  &__item{
+    display: flex;
+    position: relative;
+    background-color: $background;
+    width: 303px;
+    height: 294px;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+    overflow: hidden;
+    &-front{
+      position:relative ;
+      transform: translateZ(0);
+      opacity: 1;
+      visibility: visible;
+      transition: all .7s ease-in;
+      border: 1px solid transparent;
+      &--hidden{
+        position: absolute;
+        transform: translateZ(-120%) scale(0.3);
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+    }
+    &-back{
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateZ(-220%) translateX(-200%) scale(0.3);
+      transition: all .7s ease-in;
+      border: 1px solid transparent;
+      border-radius: 9px;
+      z-index: -11;
+      &--visible{
+        display: flex;
+        flex-shrink: 0;
+        opacity: 1;
+        visibility: visible;
+        transition: all .7s ease-in-out;
+        transform: scale(1) translateZ(0) translateX(0) ;
+        z-index: 10000;
+        width: 303px;
+        height: 294px;
+        border: 1px solid black;
+        &::before{
+          content: "";
+          right: 0px;
+          top: -123px;
+          position: absolute;
+          background-image: url("../img/sprite.svg#pump");
+          background-size: cover;
+          background-repeat: no-repeat;
+          transform:rotateX(180deg);
+          width: 283px;
+          height: 309px;
+        }
+      }
+    }
+    &-img{
+      margin-bottom: 21px;
+      border-top-right-radius: 9px;
+      border-top-left-radius: 9px;
+    }
+    &-content{
+      text-align: center;
+    }
+    &-text{
+      text-transform: uppercase;
+      margin-bottom: 3px;
+    }
+    &-cost{
+      @extend %montserrat-700;
+      position: relative;
+      font-size: 20px;
+      color: $secondary;
+      padding-right: 17px;
+      &--img{
+        &::before{
+          position: absolute;
+          content: "";
+          right: -7px;
+          background-image: url("../img/sprite.svg#rub-green");
+          background-repeat: no-repeat;
+          background-size: cover;
+          background-position: center center;
+          width: 10px;
+          height: 14px;
+        }
+      }
+    }
+  }
+}
+
+.modal-form{
+  position: relative;
+  padding-top: 65px;
+  padding-bottom: 98px;
+  &::before{
+
+  }
+  &__content{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 720px;
+  }
+  &__elem{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    &:nth-child(odd){
+      margin-right: 20px;
+    }
+    &:first-child{
+      margin-bottom: 10px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 10px;
+    }
+    &--date{
+      position: relative;
+      &::before{
+        position: absolute;
+        content: "";
+        top: 30px;
+        left: 25px;
+        width: 22px;
+        height: 22px;
+        background-image: url("../img/sprite.svg#calendar");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1999999;
+      }
+      &::after{
+        position: absolute;
+        content: "";
+        transform: rotate(90Deg);
+        top: 35px;
+        right: 25px;
+        width:7px;
+        height: 12px;
+        background-image: url("../img/sprite.svg#accordion");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1999999;
+      }
+    }
+    &--call{
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        top: 32px;
+        left: 15px;
+        width: 17px;
+        height: 17px;
+        background-image: url("../img/sprite.svg#call-green");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1999999;
+      }
+    }
+    &--client{
+      position: relative;
+      &::before{
+        content: "";
+        position: absolute;
+        top: 32px;
+        left: 15px;
+        width: 17px;
+        height: 17px;
+        background-image: url("../img/sprite.svg#person");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        z-index: 1999999;
+      }
+    }
+  }
+  &__date{
+    position: relative;
+  }
+  &__count{
+    padding: 8px 0;
+    display: flex;
+    justify-content: center;
+    &-num{
+      font-size: 18px;
+      line-height: 22px;
+      &--inner{
+        padding: 3px 35px 5px;
+        border: 0.5px solid $secondary;
+        margin-right: 11px;border-radius: 4px;
+      }
+    }
+    &-decrement{
+      margin-right: 11px;
+      @extend %button-bg;
+      border: 0.5px solid $secondary;
+      border-radius: 4px;
+    }
+    &-minus{
+      position: relative;
+      left: 0;
+      width: 12px;
+      height: 2px;
+      display: block;
+      background-color: $accent;
+      &::before{
+
+
+      }
+    }
+    &-plus{
+      position: relative;
+      left: 0;
+      width: 12px;
+      height: 2px;
+      display: block;
+      background-color: $accent;
+      &::before{
+        left: 5px;
+        content: "";
+        top: -5px;
+        position: absolute;
+        display: block;
+        height: 12px;
+        width: 2px;
+        background-color: #121214;
+      }
+    }
+  }
+}
+
+.modal-form__tel,
+,.modal-form__name,
+ .modal-form__count,
+ .modal-form__date {
+   font-size:16px ;
+   display: flex;
+   flex-grow: 2;
+   width: 350px;
+   height: 46px;
+   border-radius: 8px;
+   border:1px solid #787878;
+  background-color: $white;
+ }
+
+.modal-flip__front-img,
+.modal-flip__back-img{
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  cursor: pointer;
+}
+
+.modal-flip__back-img > p
+.modal-flip__back-img > span{
+  font-size: 18px;
+  line-height: 165%;
+}
+
+.modal-flip__back-img > span{
+  @extend %montserrat-700;
+}
+.modal-form__tel,
+.modal-form__name,
+ .modal-form__date{
+  padding-left: 85px;
+}
+.modal-pagination{
+  position: relative;
+  align-items: center;
+  display: flex;
+  height: 23px;
+}
+
+modal-pagination__text{
+
+}
+
+.modal-bg{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.modal-pagination__bullets-content{
+  display: flex;
+  align-items: center;
+  width: 194px;
+  height: 23px;
+}
+
+.modal-line__dark{
+  display: block;
+  width: 54px;
+  height: 2px;
+  background-color: $accent;
+  margin-right: 14px;
+}
+
+.swiper-pagination__modal{
+  margin-right: 37px;
+}
