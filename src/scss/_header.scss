@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
   &-navigation{
-    //position: relative;
+    
     margin: 0 auto;
     max-width: 100%;
     &.header--fixed{
@@ -58,19 +58,22 @@
     align-items: center;
     padding-top: 30px;
     margin-right: 58px;
-    &__elem {
-      &:not(:last-child) {
-        margin-right: 50px;
-      }
+    &__elem  {
+
       &-tel{
         display: none;
       }
+        + li {
+        margin-left: 50px;
+      }
+
     }
 
     &__link {
       color: $white;
       @extend %montserrat-600;
       line-height: 105%;
+      text-transform: uppercase;
     }
   }
 
@@ -109,7 +112,7 @@
 
     &__btn {
       background-color: rgba(255, 255, 255, 0.4);
-      padding: 12px 20px;
+      padding: 10px 16px;
       border-radius: 9px;
       color: $white;
       cursor: pointer;
@@ -234,15 +237,16 @@
     position: relative;
     top: 24px;
     display: none;
-    width: 20px;
+    width: 27px;
     height: 23px;
     outline: transparent;
     border: transparent;
     background-color:transparent;
     &__line{
       display: block;
-      width: 22px;
+      width: 27px;
       height: 2px;
+      transition: all .45s linear;
       background-color: $white;
       &--first{
         position: absolute;
@@ -258,5 +262,18 @@
         bottom: 0;
       }
     }
+  }
+}
+
+.burger--active{
+  & .header-burger__line--first,
+  .header-burger__line--fourth{
+    opacity: 0;
+  }
+  & .header-burger__line--second{
+    transform:translateY(-50%)  rotate(45deg);
+  }
+  & .header-burger__line--third{
+    transform: translateY(-50%) rotate(-45deg);
   }
 }

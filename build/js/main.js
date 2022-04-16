@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (mobileMenu.classList.contains('menu--active')) { //Проверяем, есть ли у меню активный класс
             burger.classList.add('burger--active'); //Когда открыто, иконка становится крестиком
             headerCon.classList.add('header__bg--active');
+            headerCon.classList.add('header__bg--active');
             headerInnerCon.style.display = 'none';
         } else { //Когда нету активного класса у меню
             burger.classList.remove('burger--active'); //Возвращает в исходное состояние
@@ -339,6 +340,7 @@ document.addEventListener('DOMContentLoaded', () => {
 $(function () {
     $('.header-slider__wrapper').slick({
         dots: true,
+        mobileFirst: true,
         vertical: true,
         verticalSwiping: true,
         arrows: false,
@@ -347,6 +349,20 @@ $(function () {
         cssEase: 'ease-in-out',
         adaptiveHeight: true,
         appendDots: $('.slider-dots__box'),
+        responsive: [
+            {
+                breakpoint: 578,
+                settings: {
+                    vertical: true,
+                    verticalSwiping: true,
+                },
+                breakpoint: 576,
+                settings: {
+                    vertical: false,
+                    verticalSwiping: false,
+                }
+            }
+        ]
     });
 });
 //     const mySwiper = new Swiper('.route-slider', {
