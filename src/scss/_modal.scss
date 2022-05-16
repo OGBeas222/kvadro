@@ -194,13 +194,11 @@
   position: relative;
   padding-top: 65px;
   padding-bottom: 98px;
-  &::before{
-
-  }
   &__content{
     display: flex;
     flex-wrap: wrap;
     max-width: 720px;
+    margin-bottom: 20px;
   }
   &__elem{
     display: flex;
@@ -330,6 +328,16 @@
         background-color: #121214;
       }
     }
+  }
+  &__submitted{
+    @extend %montserrat-600;
+    font-size: 14px;
+    line-height: 130%;
+    padding: 14px 29px;
+    background-color: $secondary;
+    color: $white;
+    border-radius: 9px;
+    border: 1px solid transparent;
   }
 }
 

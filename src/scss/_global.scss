@@ -29,13 +29,11 @@ body {
 }
 
 .title{
-  display: inline-block;
-  position: relative;
+  display: block;
+  text-align:center ;
   font-size: 36px;
   color: #121214;
   @extend %montserrat-700;
-  transform: translateX(-50%);
-  right: -50%;
 }
 
 .title__mb-1{
@@ -46,11 +44,11 @@ body {
   transform: scaleX(-1)
 }
 
-.slick-list {
-  overflow: hidden;
-  display: flex;
-  min-width: 0;
-}
+//.slick-list {
+//  overflow: hidden;
+//  display: flex;
+//  min-width: 0;
+//}
 
 .header-content__elem .slick-dots {
   display: flex;
@@ -170,11 +168,11 @@ body {
   z-index: -4;
 }
 
-.header-slider__wrapper .slick-list{
-  display: flex;
-  min-width: 0;
-  overflow: hidden;
-}
+//.header-slider__wrapper .slick-list{
+//  display: flex;
+//  min-width: 0;
+//  overflow: hidden;
+//}
 
 .sr-only{
   position: absolute;
@@ -298,12 +296,6 @@ body {
 .route-slider__wrapper .swiper-slide-active[aria-label="3 / 3"]{
   margin-left: 268px;
 }
-
-//.route-content .route-content__right{
-//
-//}
-
-
 
 .route-inner__left .swiper-pagination > .swiper-pagination-bullet{
   &:not(:first-child){
@@ -604,4 +596,54 @@ body {
 }
 .modal-slider__wrapper >  .modal-slider__item.swiper-slide-active[aria-label="1 / 3"]{
   margin-left: 183px;
+}
+
+.header-menu__link{
+  transition: all .45s linear;
+  &:hover{
+    opacity: .9;
+  }
+}
+
+.text-anim{
+  transition: all .45s linear;
+  &:hover{
+    border-bottom: 2px solid #3095a1;
+  }
+}
+
+.btn-transition{
+  border: 1px solid transparent;
+  transition: all .3s linear ;
+  &:hover{
+    border: 1px solid $secondary;
+    background-color: transparent;
+    color: $secondary;
+  }
+  &:focus{
+    box-shadow:22px 8px 19px 5px rgba(3,126,140,0.18);
+  }
+
+
+}
+
+.btn-transition__light{
+  border: 1px solid transparent;
+  transition: all .3s linear ;
+  &:hover{
+    border: 1px solid $secondary;
+    background-color: $secondary;
+    color: $white;
+  }
+}
+
+.btn-transition__white{
+  border: 1px solid transparent;
+  transition: all .3s linear ;
+  &:hover{
+    border: 1px solid $secondary;
+    background-color: #FFf;
+    color: $secondary;
+    rule:properties;
+  }
 }

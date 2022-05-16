@@ -1,5 +1,9 @@
 @media(max-width: 1440px) {
 
+  .container{
+    max-width: 1300px;
+  }
+
   .logo {
     position: absolute;
     left: 20px;
@@ -197,10 +201,12 @@
 @media(max-width: 576px) {
 
   .header{
+    min-height: 600px;
     &-content{
       position: relative;
       flex-direction: column;
       align-items: flex-start;
+      padding-left: 8px;
       &__item{
         margin-bottom: 104px;
       }
@@ -234,13 +240,97 @@
         margin-right: 15px;
       }
       }
+      &__title{
+        font-size: 45px;
+        margin-bottom: 18px;
+      }
+      &__text{
+        font-size: 17px;
+        margin-bottom:33px;
+      }
+      &__item{
+        margin-bottom: 80px;
+      }
+      &__btn{
+        padding: 14px 60px 14px 19px;
+        &::after{
+          right: 14px;
+          bottom: 8px;
+          width: 29px;
+          height: 29px;
+        }
+        &::before{
+          bottom: 18px;
+        }
+      }
     }
+    &-menu.menu--active{
+
+      & .text-anim{
+          &:hover{
+            border-bottom: none;
+          }
+        }
+
+    }
+  }
+}
+
+@media(max-width: 475px) {
+
+
+  .header{
+    &-content {
+      padding-left: 5px;
+      &__title{
+        font-size: 36px;
+        margin-bottom: 18px;
+      }
+      &__text{
+        font-size: 15px;
+        margin-bottom:33px;
+      }
+      &__item{
+        margin-bottom: 80px;
+      }
+    }
+
   }
 
 
 
+}
+
+
+
+@media(max-width: 375px) {
+
+
+  .header{
+    &-content {
+      &__title{
+        font-size: 32px;
+      }
+      &__text{
+        font-size: 14px;
+      }
+    }
+  }
+}
 
 
 
 
+//Media for mobiles(  disabled hover )  -_-
+
+@media (pointer: fine) {
+  .text-anim:hover{
+    border-bottom:2px solid transparent;
+  }
+}
+
+@media (pointer: coarse) {
+  .text-anim{
+    border-bottom: 2px solid transparent;
+  }
 }

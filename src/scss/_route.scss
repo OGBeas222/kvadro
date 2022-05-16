@@ -5,6 +5,7 @@
   background-color: $background;
   overflow: hidden;
   &-basic{
+    z-index: 11;
     position: relative;
     padding-bottom: 144px;
   }

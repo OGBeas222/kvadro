@@ -218,6 +218,9 @@
       align-items: center;
       position: relative;
       right: 0;
+      //& li + li{
+      //  margin-left: 65px;
+      //}
     }
     &__elem{
       &:not(:last-child){
