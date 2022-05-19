@@ -45,9 +45,23 @@
 }
 
 .modal--visible{
+  position: relative;
   opacity: 1;
   visibility: visible;
   transition: all .3s ease-in-out;
+  &._loading{
+    &::before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: url("../img/loader.gif") center / 50px no-repeat;
+      z-index: 999999999999999999;
+      background-color: rgba(0,0,0,0.87);
+    }
+  }
 }
 
 .modal-close__span{
@@ -287,7 +301,9 @@
       font-size: 18px;
       line-height: 22px;
       &--inner{
-        padding: 3px 35px 5px;
+        text-align: center;
+        max-width: 75px;
+        padding: 5px;
         border: 0.5px solid $secondary;
         margin-right: 11px;border-radius: 4px;
       }
@@ -338,6 +354,7 @@
     color: $white;
     border-radius: 9px;
     border: 1px solid transparent;
+    margin-top: 22px;
   }
 }
 
@@ -353,6 +370,9 @@
    border-radius: 8px;
    border:1px solid #787878;
   background-color: $white;
+  &._error{
+    box-shadow: 0 0 14px #FF3900;
+  }
  }
 
 .modal-flip__front-img,
@@ -385,7 +405,7 @@
 }
 
 modal-pagination__text{
-
+  box-shadow: 0 0 14px #FF3900;
 }
 
 .modal-bg{
@@ -420,3 +440,39 @@ modal-pagination__text{
 .swiper-pagination__modal{
   margin-right: 37px;
 }
+
+
+.modal-form__name._error{
+  box-shadow: 0 0 14px #FF3900;
+}
+
+.modal-form__count._error{
+  box-shadow: 0 0 14px #FF3900;
+}
+
+.modal-form__date._error{
+  box-shadow: 0 0 14px #FF3900;
+}
+.modal-form__tel._error{
+  box-shadow: 0 0 14px #FF3900;
+}
+
+//._sending{
+//  border: .2em solid #000;
+//  border-top-color: #037E8C;
+//  border-radius: 50%;
+//  animation: 1s loader-05 linear infinite;
+//  position: relative;
+//  &:before {
+//    content: '';
+//    display: block;
+//    width: inherit;
+//    height: inherit;
+//    position: absolute;
+//    top: -.2em;
+//    left: -.2em;
+//    border: .2em solid currentcolor;
+//    border-radius: 50%;
+//    opacity: .5;
+//  }
+//}

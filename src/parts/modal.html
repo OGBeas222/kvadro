@@ -86,36 +86,34 @@
                     <h6 class="modal-title">
                         Бронирование онлайн
                     </h6>
-                    <form class="modal-form__content">
+                    <form id="form" action="#"  method="post" class="modal-form__content">
 
                         <div class="modal-form__elem modal-form__elem--date">
                             <label class="modal-form__label">Желаемая дата</label>
-                            <input class="modal-form__date" id="datepicker" type="text">
+                            <input class="modal-form__date _req _text"  type="text">
                         </div>
                         <div class="modal-form__elem">
                             <label class="modal-form__label">Количество человек дата</label>
                             <div class="modal-form__count">
-                                <button class="modal-form__count-decrement">
+                                <button class="modal-form__count-decrement btn-click"  data-directin="minus">
                                     <span class="modal-form__count-minus"></span>
                                 </button>
-                                <span class="modal-form__count-num--inner">
-                                      <p class="modal-form__count-num">3</p>
-                                </span>
-                                <button class="modal-form__count-decrement">
+                                <input class="modal-form__count-num--inner _req _num" type="text" value="0"  />
+                                <button class="modal-form__count-decrement btn-click" data-directin="plus">
                                     <span class="modal-form__count-plus"></span>
                                 </button>
                             </div>
                         </div>
                         <div class="modal-form__elem modal-form__elem--call">
                             <label class="modal-form__label">Телефон или WhatsApp</label>
-                            <input class="modal-form__tel" type="tel">
+                            <input class="modal-form__tel _req _tel" type="tel">
                         </div>
                         <div class="modal-form__elem modal-form__elem--client">
                             <label class="modal-form__label">Как к Вам обращаться?</label>
-                            <input class="modal-form__name" type="text">
+                            <input class="modal-form__name _req _text" type="text">
                         </div>
+                        <button type="submit" class="modal-form__submitted btn-transition">Забронировать</button>
                     </form>
-                    <button class="modal-form__submitted btn-transition">Забронировать</button>
                 </div>
             </div>
         </div>
